@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<img src="images/logo.svg" class="logo" alt="logo of calculator">
+
+  <div class="container">
+    <form action="#">
+
+      <label  for="bill">Bill</label>
+      <input id="bill" class="round-corners" type="number" min="0" steps=".01" placeholder="0">
+  
+      <label>Select Tip %</label>
+      <div id="tip-container">
+        <input id="tip-5" class="tip-item round-corners" type="button" value="5%">
+        <input id="tip-10"  class="tip-item round-corners" type="button" value="10%">
+        <input id="tip-15"  class="tip-item round-corners" type="button" value="15%">
+        <input id="tip-25"  class="tip-item round-corners" type="button" value="25%">
+        <input id="tip-50"  class="tip-item round-corners" type="button" value="50%">
+        <input id="tip-custom" class="round-corners" min="0" type="number" steps="1" placeholder="Custom">
+      </div>
+      
+      <label  for="total-people">Number of People <span id="error"></span></label>
+      <input id="total-people" class="round-corners" type="number" step="1" placeholder="0" min="0">
+  
+    </form>
+  
+    <div id="per-person-container" >
+      <div class="flex">
+        <div>
+          <p class="amount"> Tip Amount</p>
+          <p  class="per-person"> / person</p>
+        </div>
+  
+        <p id="tip-per-person" class="person-amount">$0</p>
+      </div>
+  
+      <div class="flex">
+        <div >
+          <p  class="amount"> Total</p>
+          <p class="per-person">/ person</p>
+        </div>
+  
+        <p id="amount-per-person" class="person-amount">$0</p>
+      </div>
+     
+      
+      <button id="btn-reset" type="reset" class="round-corners">RESET</button>
+    </div>
+  </div>
+  
+<script src="index.js"></script>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ryan Boyd</a>.
+  </div>
+</body>
+</html>
